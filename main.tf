@@ -70,6 +70,7 @@ resource aws_lambda_function lambda {
 
   environment {
     variables = {
+      TZ                = "Asia/Tokyo"
       SLACK_WEBHOOK_URL = var.SLACK_WEBHOOK_URL
       SLACK_CHANNEL     = var.SLACK_CHANNEL
       SLACK_USERNAME    = var.SLACK_USERNAME
