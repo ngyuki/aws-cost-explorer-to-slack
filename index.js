@@ -32,8 +32,9 @@ function round(v) {
 }
 
 exports.handler = async function () {
-    const end = new Date();
-    const start = new Date(end.getFullYear(), end.getMonth(), end.getDate() - 1);
+    const now = new Date();
+    const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 2);
 
     //console.log('TimePeriod:', `${dateFormat(start)} ... ${dateFormat(end)}`);
 

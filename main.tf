@@ -91,7 +91,7 @@ resource aws_lambda_function lambda {
 resource aws_cloudwatch_event_rule lambda {
   name                = "lambda-billing-daily-notification"
   is_enabled          = true
-  schedule_expression = "cron(0 22 * * ? *)" # 07:00 JST
+  schedule_expression = "cron(0 14 * * ? *)" # 23:00 JST
 
   depends_on = [aws_cloudwatch_log_group.lambda]
 }
